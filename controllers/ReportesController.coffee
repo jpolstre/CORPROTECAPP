@@ -4,8 +4,8 @@ class ReportesController
 		# reporter:undefined
 		# require('jsreport').bootstrapper().start().then (bootstrapp)=>
 		# 	@reporter = bootstrapp.reporter
-		# @reporter = app.reporter
-		console.log @reporter
+		@reporter = app.reporter
+		# console.log @reporter
 
 		# models for working in this controller.
 		# @ComprasModel = require('../models/ComprasModel')(moongose)

@@ -45,10 +45,10 @@ require("jsreport").bootstrapper({
 		app : app
 	}
 }).start().then (bootstrapp)->
-		app.reporter = bootstrapp.reporter 
-		# console.log app
-		require('./routes')(app, mongoose)
-		app.listen app.get('port'), ->
+	app.reporter = bootstrapp.reporter 
+	# console.log app
+	require('./routes')(app, mongoose)
+	app.listen app.get('port'), ->
 		console.log "servidor escuchando en: #{app.get 'port'}"
 
 

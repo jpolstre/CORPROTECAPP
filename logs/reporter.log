@@ -875,3 +875,70 @@
 2014-12-06T22:49:17.881Z - info: Rendering request 1 finished in 12267 ms
 2014-12-06T22:49:44.844Z - info: Starting rendering request 3
 2014-12-06T22:49:45.696Z - info: Rendering request 3 finished in 852 ms
+2014-12-06T23:17:06.474Z - info: Searching for available extensions in D:\CORPROTECAPP\
+2014-12-06T23:17:07.398Z - info: Found 15 extensions
+2014-12-06T23:17:07.422Z - info: Using extension authentication
+2014-12-06T23:17:07.425Z - info: Using extension excel-parser
+2014-12-06T23:17:07.427Z - info: Using extension fop-pdf
+2014-12-06T23:17:07.429Z - info: Using extension html
+2014-12-06T23:17:07.431Z - info: Using extension client-html
+2014-12-06T23:17:07.433Z - info: Using extension templates
+2014-12-06T23:17:07.438Z - info: Using extension childTemplates
+2014-12-06T23:17:07.440Z - info: Using extension reports
+2014-12-06T23:17:07.441Z - info: Using extension data
+2014-12-06T23:17:07.443Z - info: Using extension images
+2014-12-06T23:17:07.448Z - info: Using extension phantom-pdf
+2014-12-06T23:17:07.451Z - info: Using extension scripts
+2014-12-06T23:17:07.452Z - info: Using extension statistics
+2014-12-06T23:17:07.454Z - info: Using extension embedding
+2014-12-06T23:17:07.456Z - info: Using extension authorization
+2014-12-06T23:17:12.661Z - info: Extensions loaded.
+2014-12-06T23:17:12.669Z - info: reporter initialized
+2014-12-06T23:20:26.542Z - info: Searching for available extensions in D:\CORPROTECAPP\
+2014-12-06T23:20:26.812Z - info: Found 15 extensions
+2014-12-06T23:20:26.867Z - info: Using extension client-html
+2014-12-06T23:20:26.870Z - info: Using extension excel-parser
+2014-12-06T23:20:26.872Z - info: Using extension fop-pdf
+2014-12-06T23:20:26.874Z - info: Using extension html
+2014-12-06T23:20:26.875Z - info: Using extension authentication
+2014-12-06T23:20:26.878Z - info: Using extension templates
+2014-12-06T23:20:26.882Z - info: Using extension images
+2014-12-06T23:20:26.884Z - info: Using extension childTemplates
+2014-12-06T23:20:26.887Z - info: Using extension data
+2014-12-06T23:20:26.889Z - info: Using extension phantom-pdf
+2014-12-06T23:20:26.891Z - info: Using extension reports
+2014-12-06T23:20:26.892Z - info: Using extension statistics
+2014-12-06T23:20:26.894Z - info: Using extension scripts
+2014-12-06T23:20:26.896Z - info: Using extension embedding
+2014-12-06T23:20:26.898Z - info: Using extension authorization
+2014-12-06T23:20:28.891Z - info: Extensions loaded.
+2014-12-06T23:20:28.897Z - info: reporter initialized
+2014-12-06T23:42:23.505Z - info: Searching for available extensions in D:\CORPROTECAPP\
+2014-12-06T23:42:24.176Z - info: Found 15 extensions
+2014-12-06T23:42:24.203Z - info: Using extension client-html
+2014-12-06T23:42:24.205Z - info: Using extension excel-parser
+2014-12-06T23:42:24.207Z - info: Using extension fop-pdf
+2014-12-06T23:42:24.209Z - info: Using extension templates
+2014-12-06T23:42:24.212Z - info: Using extension html
+2014-12-06T23:42:24.229Z - info: Using extension authentication
+2014-12-06T23:42:24.233Z - info: Using extension childTemplates
+2014-12-06T23:42:24.235Z - info: Using extension phantom-pdf
+2014-12-06T23:42:24.237Z - info: Using extension images
+2014-12-06T23:42:24.239Z - info: Using extension data
+2014-12-06T23:42:24.240Z - info: Using extension reports
+2014-12-06T23:42:24.242Z - info: Using extension scripts
+2014-12-06T23:42:24.245Z - info: Using extension statistics
+2014-12-06T23:42:24.248Z - info: Using extension authorization
+2014-12-06T23:42:24.251Z - info: Using extension embedding
+2014-12-06T23:42:26.102Z - info: Extensions loaded.
+2014-12-06T23:42:26.108Z - info: reporter initialized
+2014-12-06T23:42:57.127Z - info: Starting rendering request 1
+2014-12-06T23:42:57.688Z - info: Starting rendering request 2
+2014-12-06T23:42:57.844Z - info: Rendering request 2 finished in 156 ms
+2014-12-06T23:43:01.747Z - info: Rendering request 1 finished in 4620 ms
+2014-12-06T23:43:06.690Z - info: Starting rendering request 3
+2014-12-06T23:43:06.828Z - info: Starting rendering request 4
+2014-12-06T23:43:06.968Z - info: Rendering request 4 finished in 139 ms
+2014-12-06T23:43:07.155Z - info: Rendering request 3 finished in 465 ms
+2014-12-06T23:43:09.717Z - info: Starting rendering request 5
+2014-12-06T23:43:10.021Z - info: Rendering request 5 finished in 304 ms
