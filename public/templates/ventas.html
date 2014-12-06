@@ -1,0 +1,86 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<style type="text/css">
+		body{
+			font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+			color: #333;
+		}
+		
+		table {
+			
+			/*font-size: 13px;*/
+			border-spacing: 0;
+			border-collapse: collapse;
+			width: 100%;
+		}
+
+		table td, table th{
+			border: 2px solid #ddd;
+			padding: 5px;
+		}
+		tbody > tr:nth-child(odd) > td {
+			background-color: #f9f9f9;
+		}
+		.titulo{
+			text-align: center;
+			text-decoration: underline;
+			clear: both;
+		}
+		.fecha{
+			float: right;
+		}
+		.logo{
+			float: left;
+			/*<img src="../images/logo.png" class="logo">*/
+		}
+		.parametros span{
+			/*text-align: center;*/
+			/*text-decoration: underline;*/
+			font-style: italic;
+		}
+	</style>
+</head>
+<body>
+	
+	<h3 class="fecha">{{dateFormat fecha}}</h3>
+	<h3 class="titulo">Reporte de Ventas</h3>
+	<br>
+	<h4 class="parametros">Parametros de Busqueda: <span>{{parametros}}</span></h4>
+	<table class="table table-striped table-bordered table-hover dataTable no-footer">
+		<thead>
+			<tr>
+				<th>Fecha Emision</th>
+				<th>Cliente</th>
+				<th>Descripcion</th>
+				<th>Monto</th>
+				<th>Tipo</th>
+				<th>Nro. Comprobante</th>
+				<th>Cancelacion</th>
+			</tr>
+		</thead>
+		<tbody>
+			{{#each ventas}}
+			<tr>
+				<td>{{dateFormat fecha}}</td>
+				<td>{{cliente}}</td>
+				<td>
+					<ul>
+						{{#each this.items}}
+							<li>
+								<strong>{{this.cantidad}}</strong> {{this.descripcion}} (serie: {{this.serie}}), {{this.precio}} Bs
+							</li>
+						{{/each}}
+					</ul>
+				</td>	
+				<td>{{monto}}</td>
+				<td>{{tipo}}</td>
+				<td>{{nroComprobante}}</td>
+				<td>{{parse cancelacion}}</td>
+			</tr>  
+			{{/each}}    
+		</tbody>
+	</table>
+</body>
+</html>

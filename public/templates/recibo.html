@@ -1,0 +1,80 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<style type="text/css">
+		body{
+			font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+		}
+		
+		table {
+			color: #333;
+			/*font-size: 13px;*/
+			border-spacing: 0;
+			border-collapse: collapse;
+			width:100%;
+		}
+
+		table td, table th{
+			border: 2px solid #ddd;
+			padding: 15px;
+		}
+
+		tbody > tr:nth-child(odd) > td {
+			background-color: rgb(83, 163, 163);
+		}
+		tfoot{
+			text-align: left;
+		}
+		.comprobante{
+			float: right;
+			border: 2px dotted #ddd;
+			padding: 20px;
+		}
+		.fecha{
+			float: left;
+			width:220px;
+		}
+		.tipo{
+			clear: both;
+			text-align: center;
+			text-transform: uppercase;
+		}
+		.cliente{
+			
+			font-style: oblique;
+		}
+	</style>
+</head>
+<body>
+	<h3 class="comprobante">Nro {{nroComprobante}}</h3>
+	<h4 class="fecha">Fecha de Emision {{dateFormat fecha}}</h4>
+	<h2 class="tipo">{{tipo}}</h2>
+	<h3 class="cliente">Cliente: {{cliente}}</h3>
+	<table class="table table-striped table-bordered table-hover dataTable no-footer">
+		<thead>
+			<tr>
+				<th>Cantidad</th>
+				<th>Descripcion</th>
+				<th>Subtotal (Bs)</th>
+			</tr>
+		</thead>
+		<tbody>
+			{{#each items}}
+			<tr>
+				<td>{{cantidad}}</td>
+				<td>{{descripcion}} (serie:{{serie}})</td>
+				<td>{{precio}}</td>	
+			</tr>  
+			{{/each}}    
+		</tbody>
+		<tfoot>
+			<tr>
+				<th colspan="2">Total (Bs)</th>
+				<th>{{monto}}</th>
+			</tr>
+		</tfoot>
+	</table>
+</body>
+</html>
+

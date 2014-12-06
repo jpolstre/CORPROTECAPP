@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Corprotec - <%- @page %></title>
+	<!-- Core CSS - Include with every page -->
+	<link href="/assets/plugins/bootstrap/bootstrap.css" rel="stylesheet" />
+	
+	<link href="/assets/font-awesome/css/font-awesome.css" rel="stylesheet" />
+	<link href="/assets/plugins/pace/pace-theme-big-counter.css" rel="stylesheet" />
+	<link href="/assets/css/style.css" rel="stylesheet" />
+	<link href="/assets/css/main-style.css" rel="stylesheet" />
+	<link href="/css/katika.css" rel="stylesheet" />
+	<!-- Page-Level CSS -->
+	<link href="/assets/plugins/morris/morris-0.4.3.min.css" rel="stylesheet" />
+	<style type="text/css">
+		ul#mi-chat{
+			padding: 10px;
+			position: fixed;
+			bottom: 10px;
+			right: 10px;
+			z-index: 10000000;
+			float: left;
+			min-width: 160px;
+			margin: 2px 0 0;
+			font-size: 12px;
+			list-style: none;
+			background-color: #fff;
+			background-clip: padding-box;
+			border: 1px solid #ccc;
+			border: 1px solid rgba(0, 0, 0, .15);
+			border-radius: 4px;
+			-webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+			box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+		}
+
+	ul#mi-chat li.divider{
+		display: block;
+		height: 1px;
+		margin: 9px 0;
+		overflow: hidden;
+		background-color: #e5e5e5;
+	}
+	
+	div#txtchat{
+		height: 200px;
+		width: 230px;
+		overflow-y: scroll;
+	}
+	ul#mi-chat input{
+		font-size: 12px;
+	}
+	</style>
+</head>
+<body>
+	<!--  wrapper -->
+	<div id="wrapper">
+		<% include 'templates/navbar_top.ect' %>
+		<% include 'templates/navbar_side.ect' %>
+		<!--  page-wrapper -->
+		<div id="page-wrapper">
+			<div class="row">
+				<!-- Page Header -->
+				<div class="col-lg-10">
+					<h1 class="page-header" id='page-header'><%- @page %></h1>
+				</div>
+				<!--End Page Header -->
+			</div>
+			<% content %>
+		</div>
+		<!-- end page-wrapper -->
+	</div>
+	<!-- end wrapper -->
+	<!-- Core Scripts - Include with every page -->
+	<script src="/assets/plugins/jquery-1.10.2.js"></script>
+	<script src="/assets/plugins/bootstrap/bootstrap.min.js"></script>
+	<script src="/assets/plugins/bootstrap/bootstrap3-typeahead.min.js"></script>
+	<script src="/assets/plugins/metisMenu/jquery.metisMenu.js"></script>
+	<script src="/assets/plugins/pace/pace.js"></script>
+	<script src="/assets/scripts/siminta.js"></script>
+	<script src="/js/jquery-ui-1.10.2.custom.min.js"></script>
+	<script src="/js/katika.class.js"></script>
+	<script src="/js/underscore-min.js"></script>
+
+	<script src="/socket.io/socket.io.js"></script>
+
+	<script type="text/javascript">
+		var io = io.connect();
+		var globalUser = '<%- @dataUser.name %>';
+		// For Collapse Nav Side.
+		var divSideJq = $('nav.navbar-static-side'),
+		divWrapperJq = $('div#page-wrapper'),
+		isVisible = true,
+		btnCollSideJq = $('button#btn-collside').on('click', function(ev){
+			if (divSideJq.is(':visible')){
+				isVisible = false;
+				divSideJq.hide()
+				btnCollSideJq.css('left', '1px').html('<i class="fa fa-arrow-right fa-fw"></i>');
+				divWrapperJq.css('margin', '0 0 0 0');
+			}else{
+				isVisible = true;
+				divSideJq.show()
+				btnCollSideJq.attr('style', '').html('<i class="fa fa-arrow-left fa-fw"></i>');
+				divWrapperJq.attr('style', '');
+			}
+		});
+		$(window).resize(function() {
+		  // console.log($(this).width());
+		  if ($(this).width()< 768) {
+				divSideJq.show()
+				
+		  }else{
+		  	if(isVisible) {
+		  		isVisible = true;
+		  		divSideJq.show()
+		  		btnCollSideJq.attr('style', '').html('<i class="fa fa-arrow-left fa-fw"></i>');
+		  		divWrapperJq.attr('style', '');
+		  	}else{
+		  		isVisible = false;
+		  		divSideJq.hide()
+		  		btnCollSideJq.css('left', '1px').html('<i class="fa fa-arrow-right fa-fw"></i>');
+		  		divWrapperJq.css('margin', '0 0 0 0');
+		  	}
+		  }
+		});
+	</script>
+	<% content 'scripts' %>
+</body>
+</html>

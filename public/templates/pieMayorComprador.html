@@ -1,0 +1,63 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<style type="text/css">
+		body{
+			font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+		}
+		.fecha{
+			float: right;
+		}
+		.titulo{
+			clear: both;
+		}
+
+	</style>
+	<script src="//localhost:6969/assets/plugins/jquery-1.10.2.js"></script>
+	<script src="//localhost:6969/assets/plugins/flot/jquery.flot.js"></script>
+	<script src="//localhost:6969/assets/plugins/flot/jquery.flot.tooltip.min.js"></script>
+	<script src="//localhost:6969/assets/plugins/flot/jquery.flot.resize.js"></script>
+	<script src="//localhost:6969/assets/plugins/flot/jquery.flot.pie.js"></script>
+</head>
+<body>
+	<h4 class="fecha">{{fecha}}</h4>
+	<h3 class="titulo">Principales 20 Clientes Compradores</h3>
+
+	<hr> 
+	<br>
+	<div id="placeholder" style="width:700px;height:400px"></div>
+	<script>
+		$(function(){ 
+			var datos = [];
+			{{#each data}}
+				datos.push({"label":"{{this.label}} {{this.data}}", "data":{{this.data}} } );
+			{{/each}} 
+
+			function drawPie(data){ 
+				$.plot($("#placeholder"), data,{
+					series: {
+						pie: {
+							show: true
+						}
+					},
+					grid: {
+						hoverable: true
+					},
+					tooltip: true,
+					tooltipOpts: {
+						content: "%p.0%, %s",
+						shifts: {
+							x: 20,
+							y: 0
+						},
+						defaultTheme: true
+					}
+				});
+			}
+			drawPie(datos);
+		});
+	</script>
+</body>
+</html>
+

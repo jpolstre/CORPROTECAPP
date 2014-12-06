@@ -1,0 +1,31 @@
+{
+  "name": "corprotec",
+  "version": "0.1.2",
+  "description": "Corprotec project test App",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+   	"coffee-script": "*",
+		"express.io": "*",
+		"mongoose": "3.8.16",
+		"ect": "*",
+		"jsreport": "0.1.17",
+		"moment": "*",
+		"underscore": "*"
+  },
+  "engines": {
+    "node": "0.10.x"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jpolstre/CORPROTECAPP.git"
+  },
+  "keywords": [
+    "node",
+    "heroku",
+    "express"
+  ],
+  "license": "MIT"
+}

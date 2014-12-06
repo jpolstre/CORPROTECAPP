@@ -1,0 +1,1 @@
+{"data":[{"label":"Ximena","data":7114.77,"fecha":"2014-12-06T22:35:05.039Z"},{"label":"Mariana Velasquez","data":1250,"fecha":"2014-12-06T03:17:53.698Z"},{"label":"Marcelo Cabrera","data":1180,"fecha":"2014-12-06T03:19:12.551Z"},{"label":"Bertha","data":420,"fecha":"2014-12-06T03:23:45.744Z"}],"fecha":"06/Dec/2014 18:49:03"}
