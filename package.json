@@ -13,7 +13,8 @@
 		"ect": "*",
 		"jsreport": "0.1.17",
 		"moment": "*",
-		"underscore": "*"
+		"underscore": "*",
+    "mime": "*"
   },
   "engines": {
     "node": "0.10.x"
